@@ -1,3 +1,3 @@
 a=2
-b=2
-print(a*b)
+b=int(input("introduiex el segon numero"))
+print("la total es ",a*b)
