@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem id="menu_vehicles" name="Vehicles"/>
+        <menuitem id="menu_vehicles_list" name="Vehicle List" parent="menu_vehicles" action="action_vehicles_list"/>
+    </data>
+</odoo>
