@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <!-- Lista de vehículos -->
+        <record model="ir.ui.view" id="vehicle_tree_view">
+            <field name="name">vehicle.tree</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="proprietari"/>
+                    <field name="matricula"/>
+                    <field name="km_actuals"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Formulario de edición de vehículos -->
+        <record model="ir.ui.view" id="vehicle_form_view">
+            <field name="name">vehicle.form</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="matricula"/>
+                            <field name="marca"/>
+                            <field name="model"/>
+                            <field name="any"/>
+                            <field name="km_actuals"/>
+                            <field name="itv_vigent"/>
+                            <field name="proprietari"/>
+                            <field name="dni_proprietari"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- Acciones -->
+        <record model="ir.actions.act_window" id="vehicle_action">
+            <field name="name">Vehicles</field>
+            <field name="res_model">fleet.vehicle</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem name="Vehicles" id="menu_fleet_vehicle_root"
+            parent="base.menu_fleet_management" sequence="10"
+            action="vehicle_action"/>
+    </data>
+</odoo>
