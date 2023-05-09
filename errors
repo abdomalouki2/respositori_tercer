@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "C:\Users\abdel\Documents\server\odoo\http.py", line 1583, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "C:\Users\abdel\Documents\server\odoo\service\model.py", line 134, in retrying
+    result = func()
+  File "C:\Users\abdel\Documents\server\odoo\http.py", line 1610, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "C:\Users\abdel\Documents\server\odoo\http.py", line 1807, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+  File "C:\Users\abdel\Documents\server\odoo\addons\website\models\ir_http.py", line 235, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "C:\Users\abdel\Documents\server\odoo\addons\base\models\ir_http.py", line 154, in _dispatch
+    result = endpoint(**request.params)
+  File "C:\Users\abdel\Documents\server\odoo\http.py", line 696, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+  File "C:\Users\abdel\Documents\server\odoo\addons\web\controllers\dataset.py", line 46, in call_button
+    action = self._call_kw(model, method, args, kwargs)
+  File "C:\Users\abdel\Documents\server\odoo\addons\web\controllers\dataset.py", line 33, in _call_kw
+    return call_kw(request.env[model], method, args, kwargs)
+  File "C:\Users\abdel\Documents\server\odoo\api.py", line 461, in call_kw
+    result = _call_kw_multi(method, model, args, kwargs)
+  File "C:\Users\abdel\Documents\server\odoo\api.py", line 448, in _call_kw_multi
+    result = method(recs, *args, **kwargs)
+  File "<decorator-gen-74>", line 2, in button_immediate_install
+  File "C:\Users\abdel\Documents\server\odoo\addons\base\models\ir_module.py", line 76, in check_and_log
+    return method(self, *args, **kwargs)
+  File "C:\Users\abdel\Documents\server\odoo\addons\base\models\ir_module.py", line 491, in button_immediate_install
+    return self._button_immediate_function(type(self).button_install)
+  File "C:\Users\abdel\Documents\server\odoo\addons\base\models\ir_module.py", line 615, in _button_immediate_function
+    registry = modules.registry.Registry.new(self._cr.dbname, update_module=True)
+  File "<decorator-gen-14>", line 2, in new
+  File "C:\Users\abdel\Documents\server\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Users\abdel\Documents\server\odoo\modules\registry.py", line 90, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "C:\Users\abdel\Documents\server\odoo\modules\loading.py", line 489, in load_modules
+    loaded_modules, update_module, models_to_check)
+  File "C:\Users\abdel\Documents\server\odoo\modules\loading.py", line 373, in load_marked_modules
+    perform_checks=perform_checks, models_to_check=models_to_check
+  File "C:\Users\abdel\Documents\server\odoo\modules\loading.py", line 206, in load_module_graph
+    registry.setup_models(cr)
+  File "C:\Users\abdel\Documents\server\odoo\modules\registry.py", line 297, in setup_models
+    model._setup_fields()
+  File "C:\Users\abdel\Documents\server\odoo\models.py", line 2803, in _setup_fields
+    field.setup(self)
+  File "C:\Users\abdel\Documents\server\odoo\fields.py", line 536, in setup
+    self.setup_related(model)
+  File "C:\Users\abdel\Documents\server\odoo\fields.py", line 602, in setup_related
+    f"Field {name} referenced in related field definition {self} does not exist."
+KeyError: 'Field driver_id referenced in related field definition fleet.vehicle.log.contract.purchaser_id does not exist.'
+
+The above server error caused the following client error:
+RPC_ERROR: Odoo Server Error
+    at makeErrorFromResponse (http://localhost:8069/web/assets/debug/web.assets_backend.js:10216:19) (/web/static/src/core/network/rpc_service.js:34)
+    at XMLHttpRequest.<anonymous> (http://localhost:8069/web/assets/debug/web.assets_backend.js:10269:27) (/web/static/src/core/network/rpc_service.js:87
