@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="vehicle" id="vehicle_1">
+            <field name="matricula">1234ABC</field>
+            <field name="marca">Ford</field>
+            <field name="model">Focus</field>
+            <field name="any">2018</field>
+            <field name="km_actuals">50000</field>
+            <field name="itv_vigent">True</field>
+            <field name="propietari">Juan Perez</field>
+            <field name="dni_propietari">12345678A</field>
+        </record>
+        <record model="vehicle" id="vehicle_2">
+            <!-- Dades del segon vehicle d'exemple -->
+        </record>
+        <!-- I així successivament per als altres tres vehicles -->
+    </data>
+</odoo>
