@@ -1,14 +1,16 @@
 {
-    'name': 'Gestió de Flota',
+    'name': 'Fleet Management',
     'version': '1.0',
-    'category': 'Tools',
-    'summary': 'Gestiona la flota de vehicles',
-    'description': 'Aquest mòdul permet gestionar una flota de vehicles',
-    'author': 'Abde i Tarik',
+    'category': 'Fleet',
+    'description': "Aquest modul es de Vehicles",
+    'author': 'Abde-Tarik',
     'depends': ['base'],
     'data': [
-        'views/vehicle_view.xml',
+        'data/fleet.vehicle.csv'
+        'security/ir.model.access.csv',
+        'views/fleet_vehicle_views.xml'
     ],
     'installable': True,
+    'aplication':True,
     'auto_install': False,
 }
