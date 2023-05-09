@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="vehicle" id="vehicle_1">
+            <field name="matricula">1234ABC</field>
+            <field name="marca">Ford</field>
+            <field name="model">Focus</field>
+            <field name="any">2018</field>
+            <field name="km_actuals">50000</field>
+            <field name="itv_vigent">True</field>
+            <field name="propietari">Juan Perez</field>
+            <field name="dni_propietari">12345678A</field>
+        </record>
+        <record model="vehicle" id="vehicle_2">
+            <field name="matricula">5678DEF</field>
+            <field name="marca">Renault</field>
+            <field name="model">Clio</field>
+            <field name="any">2020</field>
+            <field name="km_actuals">20000</field>
+            <field name="itv_vigent">False</field>
+            <field name="propietari">Maria Garcia</field>
+            <field name="dni_propietari">23456789B</field>
+        </record>
+        <record model="vehicle" id="vehicle_3">
+            <field name="matricula">9012GHI</field>
+            <field name="marca">Seat</field>
+            <field name="model">Ibiza</field>
+            <field name="any">2019</field>
+            <field name="km_actuals">30000</field>
+            <field name="itv_vigent">True</field>
+            <field name="propietari">Pedro Martinez</field>
+            <field name="dni_propietari">34567890C</field>
+        </record>
+        <record model="vehicle" id="vehicle_4">
+            <field name="matricula">3456JKL</field>
+            <field name="marca">Volkswagen</field>
+            <field name="model">Golf</field>
+            <field name="any">2021</field>
+            <field name="km_actuals">10000</field>
+            <field name="itv_vigent">True</field>
+            <field name="propietari">Ana Lopez</field>
+            <field name="dni_propietari">45678901D</field>
+        </record>
+        <record model="vehicle" id="vehicle_5">
+            <field name="matricula">7890MNO</field>
+            <field name="marca">Audi</field>
+            <field name="model">A3</field>
+            <field name="any">2017</field>
+            <field name="km_actuals">80000</field>
+            <field name="itv_vigent">False</field>
+            <field name="propietari">Carlos Fernandez</field>
+            <field name="dni_propietari">56789012E</field>
+        </record>
+    </data>
+</odoo>
